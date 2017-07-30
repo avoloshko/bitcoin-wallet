@@ -1,10 +1,15 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
 dependencies {
     compile(project(':integration-android')) {
         exclude(group: 'com.google.android', module: 'android')
     }
-    compile 'org.bitcoinj:bitcoinj-core:0.12.3'
+    compile 'org.bitcoinj:litecoinj-core:0.15-SNAPSHOT'
 }
 
 android {

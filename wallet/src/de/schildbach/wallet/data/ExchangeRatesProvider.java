@@ -75,7 +75,7 @@ public class ExchangeRatesProvider extends ContentProvider {
     private long lastUpdated = 0;
 
     private static final HttpUrl BITCOINAVERAGE_URL = HttpUrl
-            .parse("https://apiv2.bitcoinaverage.com/indices/global/ticker/short?crypto=BTC");
+            .parse("https://apiv2.bitcoinaverage.com/indices/global/ticker/short?crypto=LTC");
     private static final String BITCOINAVERAGE_SOURCE = "BitcoinAverage.com";
 
     private static final long UPDATE_FREQ_MS = 10 * DateUtils.MINUTE_IN_MILLIS;
@@ -241,11 +241,11 @@ public class ExchangeRatesProvider extends ContentProvider {
 
                 for (final Iterator<String> i = head.keys(); i.hasNext();) {
                     final String currencyCode = i.next();
-                    if (currencyCode.startsWith("BTC")) {
+                    if (currencyCode.startsWith("LTC")) {
                         final String fiatCurrencyCode = currencyCode.substring(3);
-                        if (!fiatCurrencyCode.equals(MonetaryFormat.CODE_BTC)
-                                && !fiatCurrencyCode.equals(MonetaryFormat.CODE_MBTC)
-                                && !fiatCurrencyCode.equals(MonetaryFormat.CODE_UBTC)) {
+                        if (!fiatCurrencyCode.equals(MonetaryFormat.CODE_LTC)
+                                && !fiatCurrencyCode.equals(MonetaryFormat.CODE_MLTC)
+                                && !fiatCurrencyCode.equals(MonetaryFormat.CODE_ULTC)) {
                             final JSONObject exchangeRate = head.getJSONObject(currencyCode);
                             final JSONObject averages = exchangeRate.getJSONObject("averages");
                             try {

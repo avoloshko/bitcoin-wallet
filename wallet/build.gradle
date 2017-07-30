@@ -1,6 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'androidsvgdrawable'
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
 dependencies {
     compile(project(':integration-android')) {
         exclude(group: 'com.google.android', module: 'android')
@@ -14,7 +19,7 @@ dependencies {
     compile 'com.android.support:support-core-utils:25.3.0'
     compile 'com.android.support:recyclerview-v7:25.3.0'
     compile 'com.android.support:cardview-v7:25.3.0'
-    compile 'org.bitcoinj:bitcoinj-core:0.14.4'
+    compile 'org.bitcoinj:litecoinj-core:0.15-SNAPSHOT'
     compile 'com.google.protobuf:protobuf-java:2.6.1'
     compile 'com.google.guava:guava:20.0'
     compile 'com.google.zxing:core:3.3.0'

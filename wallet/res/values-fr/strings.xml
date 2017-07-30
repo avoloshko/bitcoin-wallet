@@ -244,11 +244,11 @@
   <string name="preferences_category_labs">Labo</string>
   <string name="preferences_precision_title">Dénomination et précision</string>
   <string name="preferences_precision_summary">Unité d\'affichage. Ceci n\'affecte pas les calculs.</string>
-  <string name="preferences_precision_labels_8">BTC, 8 décimales</string>
-  <string name="preferences_precision_labels_6">BTC, 6 décimales</string>
-  <string name="preferences_precision_labels_4">BTC, 4 décimales</string>
-  <string name="preferences_precision_labels_2_3">mBTC, 2 décimales</string>
-  <string name="preferences_precision_labels_0_6">µBTC, pas de décimale</string>
+  <string name="preferences_precision_labels_8">LTC, 8 décimales</string>
+  <string name="preferences_precision_labels_6">LTC, 6 décimales</string>
+  <string name="preferences_precision_labels_4">LTC, 4 décimales</string>
+  <string name="preferences_precision_labels_2_3">mLTC, 2 décimales</string>
+  <string name="preferences_precision_labels_0_6">µLTC, pas de décimale</string>
   <string name="preferences_own_name_title">Votre nom</string>
   <string name="preferences_own_name_summary">Votre nom qui sera ajouté aux demandes de paiement. Il doit être court.</string>
   <string name="preferences_send_coins_autoclose_title">Fermer automatiquement la fenêtre d\'envoi de pièces</string>

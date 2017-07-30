@@ -120,14 +120,14 @@ public final class CurrencyAmountView extends FrameLayout {
     }
 
     public void setCurrencySymbol(@Nullable final String currencyCode) {
-        if (MonetaryFormat.CODE_BTC.equals(currencyCode)) {
-            currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_btc);
+        if (MonetaryFormat.CODE_LTC.equals(currencyCode)) {
+            //currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_btc);
             localCurrencyCode = null;
-        } else if (MonetaryFormat.CODE_MBTC.equals(currencyCode)) {
-            currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_mbtc);
+        } else if (MonetaryFormat.CODE_MLTC.equals(currencyCode)) {
+            //currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_mbtc);
             localCurrencyCode = null;
-        } else if (MonetaryFormat.CODE_UBTC.equals(currencyCode)) {
-            currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_ubtc);
+        } else if (MonetaryFormat.CODE_ULTC.equals(currencyCode)) {
+            //currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_ubtc);
             localCurrencyCode = null;
         } else if (currencyCode != null) // fiat
         {
