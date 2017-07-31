@@ -119,27 +119,27 @@ public final class CurrencyAmountView extends FrameLayout {
         updateAppearance();
     }
 
-    public void setCurrencySymbol(@Nullable final String currencyCode) {
+    public void setCurrencySymbol(@Nullable String currencyCode) {
         if (MonetaryFormat.CODE_LTC.equals(currencyCode)) {
-            //currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_btc);
+            currencyCode = "Ł";
             localCurrencyCode = null;
         } else if (MonetaryFormat.CODE_MLTC.equals(currencyCode)) {
-            //currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_mbtc);
+            currencyCode = "mŁ";
             localCurrencyCode = null;
         } else if (MonetaryFormat.CODE_ULTC.equals(currencyCode)) {
-            //currencySymbolDrawable = getResources().getDrawable(R.drawable.currency_symbol_ubtc);
+            currencyCode = "µŁ";
             localCurrencyCode = null;
-        } else if (currencyCode != null) // fiat
+        } else {
+            localCurrencyCode = currencyCode;
+        }
+
+        if (currencyCode != null) // fiat
         {
             final String currencySymbol = GenericUtils.currencySymbol(currencyCode);
             final float textSize = textView.getTextSize();
             final float smallerTextSize = textSize * (20f / 24f);
             currencySymbolDrawable = new CurrencySymbolDrawable(currencySymbol, smallerTextSize, lessSignificantColor,
                     textSize * 0.37f);
-            localCurrencyCode = currencyCode;
-        } else {
-            currencySymbolDrawable = null;
-            localCurrencyCode = null;
         }
 
         updateAppearance();
